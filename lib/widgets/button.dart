@@ -5,8 +5,9 @@ class MyButton extends StatelessWidget {
   //variables
   final Color color;
   final String text;
-  final void Function() on;
-  const MyButton({required this.color, required this.text, required this.on});
+  final void Function() onPressed;
+  const MyButton(
+      {required this.color, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class MyButton extends StatelessWidget {
           shadowColor: const Color.fromARGB(255, 0, 217, 255),
           elevation: 5,
           minimumSize: const Size(70, 40)),
-      onPressed: on,
+      onPressed: onPressed,
       child: Text(
         text,
         style: const TextStyle(

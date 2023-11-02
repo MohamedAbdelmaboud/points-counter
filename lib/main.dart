@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'PointCounter.dart';
+import 'Points_counter_view.dart';
 
 void main() {
-  runApp(const PointCounter());
+  runApp(const PointCounterView());
 }
