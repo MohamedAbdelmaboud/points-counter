@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fourth_project/componant/button.dart';
-import 'package:fourth_project/componant/win.dart';
+import 'package:fourth_project/widgets/button.dart';
+import 'package:fourth_project/widgets/win_container.dart';
 
 class PointCounter extends StatefulWidget {
   const PointCounter({Key? key}) : super(key: key);
@@ -61,10 +61,11 @@ class _PointCounterState extends State<PointCounter> {
                       MyButton(
                           color: Colors.cyan,
                           text: "Add 1 Points",
-                          on:(){setState(() {
-                            ++pointsA;
-                          });} 
-                          ),
+                          on: () {
+                            setState(() {
+                              ++pointsA;
+                            });
+                          }),
                       const SizedBox(
                         height: 5,
                       ),
@@ -155,7 +156,7 @@ class _PointCounterState extends State<PointCounter> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.cyan,
+                    backgroundColor: Colors.cyan,
                     minimumSize: const Size(70, 40),
                     shadowColor: const Color.fromARGB(255, 0, 217, 255),
                     elevation: 10,
@@ -167,9 +168,9 @@ class _PointCounterState extends State<PointCounter> {
                     pointsB = 0;
                   });
                 },
-                child: Row(
+                child: const Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Text(
                       "Reset",
                       style: TextStyle(fontSize: 15),
@@ -183,12 +184,12 @@ class _PointCounterState extends State<PointCounter> {
                 height: 9,
               ),
               pointsA == pointsB
-                  ? const Win(text: "The match is drawn", color: Colors.white)
+                  ? const WinContainer(text: "The match is drawn", color: Colors.white)
                   : pointsA > pointsB
-                      ? const Win(
+                      ? const WinContainer(
                           text: "until now, the winner team is Al-Ahly",
                           color: Colors.white)
-                      : const Win(
+                      : const WinContainer(
                           text: "until now, the winner team is Zamalek",
                           color: Colors.white)
             ],

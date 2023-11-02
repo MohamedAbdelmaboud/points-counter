@@ -1,10 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
 
-class Win extends StatelessWidget {
+class WinContainer extends StatelessWidget {
   final String text;
   final Color color;
-  const Win({required this.text, required this.color});
+  const WinContainer({required this.text, required this.color});
 
   @override
   Widget build(BuildContext context) {
