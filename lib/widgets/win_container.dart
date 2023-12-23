@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 
 class WinContainer extends StatelessWidget {
   final String text;
-  final Color color;
-  const WinContainer({required this.text, required this.color});
+  const WinContainer({required this.text});
 
   @override
   Widget build(BuildContext context) {
